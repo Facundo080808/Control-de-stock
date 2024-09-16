@@ -1,0 +1,70 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .detailValueProducts{
+    color: #493b3b;
+    display: flex;
+    flex-direction: column;
+  }
+  .detailItem strong {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .detailValue {
+    color: #333;
+  }
+  .detailItemProducts{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .delivery, .wholSale {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #5c6879; /* Cambiar según la paleta de colores que uses */
+  }
+  
+  .delivery {
+    background-color: #8E99A9; /* Color diferente para las opciones booleanas */
+  }
+  
+  .wholSale {
+    background-color: #464C5A;
+  }
+  
+  .totalAmount {
+    font-size: 18px;
+    color: #6f88aa;
+    font-weight: bold;
+  }
+  
+  .status {
+    font-size: 16px;
+    color: green; /* Cambiar el color según el estado */
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  

@@ -1,0 +1,34 @@
+.main {
+    margin-top:10em ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.th  {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.tr {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tr:hover {
+    background-color: #eaeaea;
+}

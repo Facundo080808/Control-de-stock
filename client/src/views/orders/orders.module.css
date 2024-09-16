@@ -1,0 +1,36 @@
+.container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .ordersTable th, .ordersTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ordersTable th {
+    background-color: #464C5A;
+    color: white;
+  }
+  
+  .ordersTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .ordersTable tr:hover {
+    background-color: #ddd;
+  }
+  

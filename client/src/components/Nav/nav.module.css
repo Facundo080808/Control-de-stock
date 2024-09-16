@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #464C5A; 
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    text-align: center;
+    max-height: 3em;
+  }
+  .title{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+  }
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navItem {
+    font-size: 18px;
+  }
+  
+  .navLink {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #8E99A9; /* Color más claro del palette */
+  }
+  
