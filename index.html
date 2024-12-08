@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Principal</title>
+</head>
+<body>
+    <header>
+        <button id='sidebar' class="btn btn-warning mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+            Ver clientes
+        </button>
+        <nav>
+            <li><a href="#" class="custom-link">Principal</a></li>
+            <li><a href="./views/products/products.html">Productos</a></li>
+            <li><a href="./views/orders/orders.html">Ordenes</a></li>
+        </nav>
+        <label>
+            <input type="search" id="busqueda" placeholder="Buscar productos" class="form-control rounded-pill">
+        </label>
+    </header>
+    <main style="display: flex; flex-direction: row; overflow-y: scroll; height: 100vh;" id="main">
+        <table id="productosTable" class="table table-striped table-bordered" style="width: 70%; max-height: 100vh; overflow-y: auto;">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Precio por mayor</th>
+                    <th>Stock</th>
+                    <th>Añadir al carrito</th>
+                </tr>
+            </thead>
+            <tbody id='productosBody'></tbody>
+        </table>
+        <article id="loading" class="spinner-border text-warning"></article>
+        <section id="CART" style="width: 30vw;">
+            <section id="cartBody" style="width: 100%;"></section>
+            <article id="client-info" class="d-flex flex-column p-3 bg-light rounded">
+                <h2 class="mt-3">Precio total: $<span id="totalPrice">0</span></h2>
+                <label class="mb-3">
+                    <input id="nombre" type="text" placeholder="Nombre del cliente" class="form-control">
+                </label>
+                <label class="d-flex align-items-center mb-3">
+                    <input type="checkbox" id="transferencia" class="form-check-input">
+                    <span class="ms-2">Transferencia?</span>
+                </label>
+                <label class="d-flex align-items-center mb-3">
+                    <input type="checkbox" id="mayorista" class="form-check-input">
+                    <span class="ms-2">Compra por mayor</span>
+                </label>
+                <label class="d-flex align-items-center mb-3">
+                    <input type="checkbox" id="delivery" class="form-check-input">
+                    <span class="ms-2">Delivery?</span>
+                </label>
+                <button id="COMPRAR">Realizar Compra</button>
+            </article>
+        </section>
+        
+        <section class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel" style="width: 40%;">
+            <div style="display: flex;justify-content: space-between;padding:1em;">
+                <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Clientes recurrentes</h5>
+                <input type="search" id="buscarCliente" placeholder="Buscar un cliente">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" id="clientsContainer">
+                <div class="card" style="width: auto;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de bienvenida -->
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="welcomeModalLabel">Bienvenido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>¿Quien esta usando el programa?</h3>
+                    <input type="text" id="EMPLOYEE" class="form-control" placeholder="Aqui deberas escribir tu nombre">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        welcomeModal.show();})
+    </script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./renderer.js" type="module"></script>
+    
+</body>
+</html>

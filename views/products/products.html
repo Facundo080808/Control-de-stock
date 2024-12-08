@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./products.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <li><a href="../../index.html">Principal</a></li>
+            <li><a href="#" class="custom-link">Productos</a></li>
+            <li><a href="../orders/orders.html">Ordenes</a></li>
+        </nav>
+    </header>
+    <div id='loading' ></div>
+    <main id="Main">
+        
+        <section id="backModal"> 
+          <!--  <aside class="col-md-4"> 
+                <h2 style="background-color:#007bff;text-align: center;color: white;">Promos</h2>
+                <div id="promoContainer" class="list-group">
+                    
+                </div>
+            </aside>-->
+
+            <table id="productosTable">
+                <thead>
+                    <tr>
+                        <th>Codigo de barras</th>
+                        <th>Marca</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Precio por mayor</th>
+                        <th>Stock</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody id="productosTablebody"></tbody>
+            </table>
+            
+            
+            <div id="overlay"></div>
+
+
+            <section id="modal">
+                <h2 id="titulo">Titulo</h2>
+                <label class="form-label">Marca del producto :
+                    <input type="text" class="form-control" id="marca">
+                </label>
+                <label class="form-label">Nombre del producto :
+                    <input type="text" class="form-control" id="nombre">
+                </label>
+                <label class="form-label">Categoría :
+                    <input type="text" class="form-control" id="categoria">
+                </label>
+                <label class="form-label">Precio :
+                    <input type="number" class="form-control" id="precio">
+                </label>
+                <label class="form-label">Precio por mayor:
+                    <input type="number" class="form-control" id="pormayor">
+                </label>
+                <label class="form-label">Cantidad en stock
+                    <input type="number" class="form-control" id="stock">
+                </label>
+                <article id="articleBtn">
+                    <!-- <button id="hacer" class="btn btn-success">Crear</button> -->
+                <span id="span" class="text-success fs-4"></span>
+                <button id="OFF" class="btn btn-danger">Cerrar</button>
+                </article>
+            </section>
+
+            <section id="SeguroBorrar">
+                <h1 id="mensaje" class="d-flex flex-wrap m-4"></h1>
+                <div class="d-flex flex-row w-100 justify-content-evenly">
+                    <button id="cancela" class="btn btn-warning">Cancelar</button>
+                    <button id="botonParaBorrar" class="btn btn-danger">Borrar</button>
+                </div>
+            </section>
+
+            <!--<section id="modalprom">
+                <h2 id="titulo">Crear promo</h2>
+                <label >nombre de la promo :
+                    <input type="text" id="nombrePromo">
+                </label>
+                <label id="labelAñadirProducts"> Añadir productos :
+                    <input type="search" id="buscar">
+                    <select  id="selectProducts"></select>
+                </label>
+                
+                <label>Precio :
+                    <input type="number" id="precioPromo">
+                </label>
+                
+                <button id="CREAR" class="btn btn-success">Crear promo</button>
+                <button id="cerrarPromo" class="btn btn-danger">Cerrar</button>
+            </section>  -->
+        </section>
+    </main>
+    <footer class="bg-dark text-white" >
+        <button id="ON" class="btn btn-warning">Crear Producto</button>
+        <!--<button class="btn btn-warning" id="crearPromo"> Crear Promo</button>-->
+    </footer >
+    <script src="./products.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

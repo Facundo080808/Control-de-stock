@@ -1,0 +1,56 @@
+{
+  "name": "aprender-electron",
+  "productName": "Control de stock",
+  "version": "1.0.0",
+  "description": "aprender electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "serve": "nodemon ./back/index.js"
+  },
+  "author": "facundi",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-deb": "^7.5.0",
+    "@electron-forge/maker-rpm": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
+    "@electron-forge/plugin-fuses": "^7.5.0",
+    "@electron/fuses": "^1.8.0",
+    "concurrently": "^9.0.1",
+    "electron": "^32.1.0",
+    "wait-on": "^8.0.1"
+  },
+  "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.42",
+    "@sequelize/mssql": "^7.0.0-alpha.43",
+    "@sequelize/postgres": "^7.0.0-alpha.43",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.4.5",
+    "electron-is-dev": "^3.0.1",
+    "electron-squirrel-startup": "^1.0.1",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7",
+    "pdf-lib": "^1.17.1",
+    "pdf-to-printer": "^5.6.0",
+    "pdfkit": "^0.15.0",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
+  },
+  "files": [
+    "back/**/*",
+    "src/**/*",
+    "index.html",
+    "renderer.js",
+    "index.css"
+  ]
+}

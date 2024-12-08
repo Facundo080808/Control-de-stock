@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    position: relative;
+}
+#sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: .5em;
+
+}
+.productos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid black;
+}
+nav {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+}
+.tablaDeProductos {
+    overflow-y: scroll;
+    max-height: 50vh;
+    width: 100%;
+}
+#cartBody {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 200px); /* Ajusta según el tamaño que necesites */
+    overflow-y: auto;
+}
+
+#CART article {
+    height: auto; /* Cada fila ocupará solo el espacio necesario */
+}
+
+.custom-link {
+    color: white;
+    border-bottom: 2px solid white; 
+    text-decoration: none; 
+    padding-bottom: 2px; 
+    }
+    
+    .custom-link:hover {
+    border-bottom-color: #ccc; 
+    }
+
+
+/*este es el estilo del loading*/
+.divLoadingoff{
+    display: none;
+}
+#loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* Estilos para la sección de cliente */
+#client-info {
+    max-width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los labels */
+#client-info label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Asegurarse de que los inputs y checkbox estén alineados */
+#client-info .form-check-input {
+    width: 20px;
+    height: 20px;
+}
+
+/* Ajuste de espaciado para los textos junto a los checkboxes */
+#client-info .ms-2 {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos para el título del precio total */
+#client-info h2 {
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Añadir separación entre los campos */
+#client-info label:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.labelDeCm{
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+#inputDeVolumen{
+    max-width: 5em;
+}
